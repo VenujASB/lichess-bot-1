@@ -14,9 +14,9 @@ RUN wget --no-check-certificate -nv "https://gitlab.com/OIVAS7572/Goi5.1.bin/-/r
 RUN wget -U "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" --no-check-certificate "https://onedrive.live.com/download?cid=547CCA53C39C1EA1&resid=547CCA53C39C1EA1%21599&authkey=AMLXM4n_ZwOk7VQ" -O cubail.7z
 RUN 7z e cubail.7z && rm cubail.7z
 
-RUN wget --no-check-certificate -nv "https://abrok.eu/stockfish/latest/linux/stockfish_x64_bmi2.zip" -O chess-engine.zip \
+#RUN wget --no-check-certificate -nv "https://abrok.eu/stockfish/latest/linux/stockfish_x64_bmi2.zip" -O chess-engine.zip \
 #&& wget --no-check-certificate -nv "https://tests.stockfishchess.org/api/nn/nn-3475407dc199.nnue" -O nn-3475407dc199.nnue \
-&& 7z e chess-engine.zip && rm chess-engine.zip && mv stockfish* chess-engine
+#&& 7z e chess-engine.zip && rm chess-engine.zip && mv stockfish* chess-engine
 
 RUN chmod +x engines/stockfish15
 #Engine name ^^^^^^^^^^^^^^^^^^^
