@@ -18,7 +18,7 @@ RUN wget -U "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gec
 RUN 7z e cubail.7z && rm cubail.7z
 
 
-RUN mv stockfish_* engines/stockfish && chmod +x engines/stockfish
+RUN chmod +x stockfish
 #Engine name ^^^^^^^^^^^^^^^^^^^
 
 CMD python3 lichess-bot.py -u
