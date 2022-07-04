@@ -11,7 +11,7 @@ engine:                      # Engine settings.
     enabled: true            # Activate polyglot book.
     book:
       standard:              # List of book file paths for variant standard.
-        - cubail.bin
+        - engines/books/cubail.bin
         - engines/books/Goi5.1.bin
 #     atomic:                # List of book file paths for variant atomic.
 #       - engines/atomicbook1.bin
@@ -98,7 +98,7 @@ challenge:                   # Incoming challenges.
   min_base: 0                # Minimum amount of base time to accept a challenge.
   variants:                  # Chess variants to accept (https://lichess.org/variant).
     - standard
-    - fromPosition
+#   - fromPosition
 #   - antichess
 #   - atomic
     - chess960
