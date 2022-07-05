@@ -11,8 +11,8 @@ engine:                      # Engine settings.
     enabled: true            # Activate polyglot book.
     book:
       standard:              # List of book file paths for variant standard.
-        - engines/books/cubail.bin
         - engines/books/Goi5.1.bin
+        - engines/books/cubail.bin
 #     atomic:                # List of book file paths for variant atomic.
 #       - engines/atomicbook1.bin
 #       - engines/atomicbook2.bin
