@@ -3,7 +3,7 @@ url: "https://lichess.org/"  # Lichess base URL.
 
 engine:                      # Engine settings.
   dir: "./engines"                  # Directory containing the engine. This can be an absolute path or one relative to lichess-bot/.
-  name: "stockfish15"          # Binary name of the engine to use.
+  name: "stockfish"          # Binary name of the engine to use.
   working_dir: ""            # Directory where the chess engine will read and write files. If blank or missing, the current directory is used.
   protocol: "uci"            # "uci" or "xboard"
   ponder: true               # Think on opponent's time.
@@ -11,7 +11,7 @@ engine:                      # Engine settings.
     enabled: true            # Activate polyglot book.
     book:
       standard:              # List of book file paths for variant standard.
-        - ./engines/books/Goi5.1.bin
+        - ./Cerebellum3Merge.bin
         - ./engines/books/Drawkiller_EloZoom_big.bin
 #     atomic:                # List of book file paths for variant atomic.
 #      - engines/atomicbook1.bin
