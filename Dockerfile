@@ -18,7 +18,7 @@ RUN wget --no-check-certificate -nv "https://abrok.eu/stockfish/latest/linux/sto
 #&& wget --no-check-certificate -nv "https://tests.stockfishchess.org/api/nn/nn-3475407dc199.nnue" -O nn-3475407dc199.nnue \
 && 7z e chess-engine.zip && rm chess-engine.zip && mv stockfish* ./engines/chess-engine
 
-RUN chmod +x ./engines/chess-engine
+RUN chmod +x ./engines/stickfish15
 #Engine name ^^^^^^^^^^^^^^^^^^^
 
 CMD python3 lichess-bot.py -u
