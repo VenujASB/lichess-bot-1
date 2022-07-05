@@ -16,9 +16,9 @@ RUN 7z e cubail.7z && rm cubail.7z && mv cubail.bin engines/books/cubail.bin
 
 RUN wget --no-check-certificate -nv "https://abrok.eu/stockfish/latest/linux/stockfish_x64_bmi2.zip" -O chess-engine.zip \
 #&& wget --no-check-certificate -nv "https://tests.stockfishchess.org/api/nn/nn-3475407dc199.nnue" -O nn-3475407dc199.nnue \
-&& 7z e chess-engine.zip && rm chess-engine.zip && mv stockfish* chess-engine
+&& 7z e chess-engine.zip && rm chess-engine.zip && mv stockfish* ./engines/chess-engine
 
-RUN chmod +x chess-engine
+RUN chmod +x ./engines/chess-engine
 #Engine name ^^^^^^^^^^^^^^^^^^^
 
 CMD python3 lichess-bot.py -u
