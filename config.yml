@@ -12,7 +12,6 @@ engine:                      # Engine settings.
     book:
       standard:              # List of book file paths for variant standard.
         - ./engines/books/Drawkiller_EloZoom_big.bin
-        - ./engines/books/cubail.bin
 #     atomic:                # List of book file paths for variant atomic.
 #       - engines/atomicbook1.bin
 #       - engines/atomicbook2.bin
