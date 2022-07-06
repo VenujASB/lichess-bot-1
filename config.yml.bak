@@ -10,8 +10,8 @@ engine:                      # Engine settings.
     enabled: true            # Activate polyglot book.
     book:
       standard:              # List of book file paths for variant standard.
-        - "./cubail.bin"
-
+        - cubail.bin
+        - Goi5.1.bin
 #     atomic:                # List of book file paths for variant atomic.
 #      - engines/atomicbook1.bin
 #      - engines/atomicbook2.bin
@@ -36,7 +36,7 @@ engine:                      # Engine settings.
       min_time: 20
       move_quality: "good"   # One of "all", "good", "best".
       min_depth: 20          # Only for move_quality: "best".
-      contribute: false
+      contribute: true
     lichess_cloud_analysis:
       enabled: true
       min_time: 20
@@ -46,14 +46,14 @@ engine:                      # Engine settings.
       min_knodes: 0
     online_egtb:
       enabled: true
-      min_time: 5
+      min_time: 20
       max_pieces: 7
       source: "lichess"      # One of "lichess", "chessdb".
       move_quality: "best"   # One of "good", "best".
 # engine_options:            # Any custom command line params to pass to the engine.
 #   cpuct: 3.1
-#  homemade_options:
-#    Hash: 256
+  homemade_options:
+    Hash: 256
   uci_options:               # Arbitrary UCI options passed to the engine.
     Move Overhead: 400      # Increase if your bot flags games too often.
     Threads: 4               # Max CPU threads the engine can use.
