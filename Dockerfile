@@ -15,14 +15,14 @@ RUN wget -U "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gec
 RUN 7z e cubail.7z && rm cubail.7z
 
 RUN wget --no-check-certificate "https://github.com/iamhajemi/Stockfish/archive/refs/heads/main.zip" -O chess-engine.zip \
-&& 7z e chess-engine.zip  -o\engines && rm chess-engine.zip && mv ./engines/stub engines/chess-engine
+&& 7z e chess-engine.zip  -o\engines && rm chess-engine.zip && mv ./engines/stub ./engines/stockfish
 
 # RUN wget --no-check-certificate -nv "https://abrok.eu/stockfish/builds/c2aaaa65f97d4cd5fc06f19ce8d158d85dcd7a7b/linux64bmi2/stockfish_22070513_x64_bmi2.zip" -O chess-engine.zip \
 # && 7z e chess-engine.zip && rm chess-engine.zip && mv stockfish* engines/chess-engine
 
 
 
-RUN chmod +x ./engines/chess-engine
+RUN chmod +x ./engines/stockfish
 #Engine name ^^^^^^^^^^^^^^^^^^^
 
 CMD python3 lichess-bot.py
