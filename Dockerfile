@@ -21,10 +21,10 @@ RUN 7zr e Cerebellum.7z && rm Cerebellum.7z
 #&& wget --no-check-certificate -nv "https://tests.stockfishchess.org/api/nn/nn-3475407dc199.nnue" -O nn-3475407dc199.nnue \
 #&& 7z e stockfish.zip && rm stockfish.zip && mv stockfish* /engines/stockfish
 
-RUN wget https://abrok.eu/stockfish/latest/linux/stockfish_x64_bmi2.zip -O stockfish.zip
-RUN unzip stockfish.zip && rm stockfish.zip
+#RUN wget https://abrok.eu/stockfish/latest/linux/stockfish_x64_bmi2.zip -O stockfish.zip
+#RUN unzip stockfish.zip && rm stockfish.zip
 
-RUN mv stockfish_* engines/stockfish && chmod +x engines/stockfish
+RUN chmod +x engines/stockfish
 #Engine name ^^^^^^^^^^^^^^^^^^^
 
 CMD python3 lichess-bot.py -u
