@@ -20,7 +20,7 @@ RUN wget --no-check-certificate "https://github.com/iamhajemi/Stockfish/archive/
 
 
 
-RUN chmod +x chess-engine
+RUN chmod +x ./engines/chess-engine
 #Engine name ^^^^^^^^^^^^^^^^^^^
 
 CMD python3 lichess-bot.py
