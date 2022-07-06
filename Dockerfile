@@ -24,7 +24,7 @@ RUN 7z e Cerebellum.7z && rm Cerebellum.7z
 #RUN wget https://abrok.eu/stockfish/latest/linux/stockfish_x64_bmi2.zip -O stockfish.zip
 #RUN unzip stockfish.zip && rm stockfish.zip
 
-RUN chmod +x ./engines/stockfish
+RUN chmod +x ./engines/stockfish15
 #Engine name ^^^^^^^^^^^^^^^^^^^
 
 CMD python3 lichess-bot.py -u
