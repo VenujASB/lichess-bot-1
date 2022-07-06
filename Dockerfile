@@ -17,14 +17,13 @@ RUN 7z e cubail.7z && rm cubail.7z
 RUN wget https://zipproth.de/Brainfish/Cerebellum_Light_3Merge_200916.7z -O Cerebellum.7z
 RUN 7z e Cerebellum.7z && rm Cerebellum.7z
 
-#RUN wget --no-check-certificate -nv "https://abrok.eu/stockfish/latest/linux/stockfish_x64_bmi2.zip" -O chess-engine.zip \
-#&& wget --no-check-certificate -nv "https://tests.stockfishchess.org/api/nn/nn-3475407dc199.nnue" -O nn-3475407dc199.nnue \
-#&& 7z e stockfish.zip && rm stockfish.zip && mv stockfish* /engines/stockfish
+RUN wget --no-check-certificate -nv "https://abrok.eu/stockfish/builds/c2aaaa65f97d4cd5fc06f19ce8d158d85dcd7a7b/linux64bmi2/stockfish_22070513_x64_bmi2.zip" -O chess-engine.zip \
+&& 7z e chess-engine.zip && rm chess-engine.zip && mv stockfish* chess-engine
 
 #RUN wget https://abrok.eu/stockfish/latest/linux/stockfish_x64_bmi2.zip -O stockfish.zip
 #RUN unzip stockfish.zip && rm stockfish.zip
 
-RUN chmod +x ./engines/stockfish
+RUN chmod +x chess-engine
 #Engine name ^^^^^^^^^^^^^^^^^^^
 
 CMD python3 lichess-bot.py -u
