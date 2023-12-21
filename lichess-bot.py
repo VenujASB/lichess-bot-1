@@ -771,7 +771,7 @@ if __name__ == "__main__":
     logging_level = logging.DEBUG if args.v else logging.INFO
     logging_configurer(logging_level, args.logfile)
     logger.info(intro(), extra={"highlighter": None})
-    CONFIG = eval(os.environ["CONFIG"])
+    CONFIG = eval(os.environ.get("CONFIG", "{}"))
 #   CONFIG = load_config(args.config or "./config.yml")
     li = lichess.Lichess(CONFIG["token"], CONFIG["url"], __version__, logging_level)
 
