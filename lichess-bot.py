@@ -773,7 +773,7 @@ if __name__ == "__main__":
     logger.info(intro(), extra={"highlighter": None})
     CONFIG = eval(os.environ.get("CONFIG", "{}"))
 #   CONFIG = load_config(args.config or "./config.yml")
-    li = lichess.Lichess(CONFIG.get("token", ""), CONFIG["url"], __version__, logging_level)
+    li = lichess.Lichess(CONFIG.get("token", ""), CONFIG["url", ""], __version__, logging_level)
 
     user_profile = li.get_profile()
     username = user_profile["username"]
